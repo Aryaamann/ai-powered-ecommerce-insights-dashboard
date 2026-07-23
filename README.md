@@ -1,4 +1,4 @@
-#  AI-Augmented E-Commerce Insights Dashboard
+#  AI-Powered E-Commerce Insights Dashboard
 
 An AI-powered business intelligence dashboard that transforms raw e-commerce transaction data into automated KPIs, statistical anomaly detection, and LLM-generated executive summaries — built to mirror real analytics workflows at data-driven e-commerce companies.
 
