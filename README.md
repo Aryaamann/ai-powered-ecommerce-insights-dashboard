@@ -19,19 +19,15 @@ This project demonstrates how AI can **support** analytics rather than replace i
 ---
 
 ## 🏗️ Architecture
-Raw CSVs (Orders, Items, Products, Customers)
-↓
-Merge + Clean (Pandas)
-↓
-KPI Engine (Pandas/NumPy)
-↓
-┌─────────────┬──────────────────┬─────────────────┐
-↓ ↓ ↓
-Plotly Charts Anomaly Detection AI Summary (Gemini)
-↓ ↓ ↓
-└─────────────┴──────────────────┴─────────────────┘
-↓
-PDF Report + Gradio Dashboard
+
+1. **Raw CSVs** (Orders, Items, Products, Customers)
+2. **Merge + Clean** (Pandas)
+3. **KPI Engine** (Pandas/NumPy)
+4. Three parallel outputs, all built from the same KPI engine:
+   - **Plotly Charts** (visual breakdowns)
+   - **Anomaly Detection** (statistical z-score analysis)
+   - **AI Summary** (Gemini, grounded strictly in computed KPIs)
+5. Combined into: **PDF Report + Gradio Dashboard**
 
 **Key design decision:** The AI (Gemini) is only ever given a curated JSON payload of pre-computed KPI values — never the raw dataframe. This guardrail ensures the AI-generated narrative is always grounded in verified numbers rather than free-form data interpretation, which is a critical distinction for using AI safely in business reporting.
 
